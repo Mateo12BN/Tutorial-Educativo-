@@ -72,5 +72,8 @@ Para mostrarle información al usuario en la pantalla, utilizamos la instrucció
 System.out.println("Hola, este texto aparecerá en la pantalla.");
 
 ```
-Ejemplo:Tu primer programa
+Ejemplo: Tu primer programa interactivo
+Vamos a juntar todo lo que hemos aprendido en un solo lugar. Puedes revisar y descargar el código fuente completo directamente aquí: 📄 elPrimerPrograma.java.
+
+Este programa le preguntará al usuario su nombre y su edad, guardará las respuestas en variables limpias y descriptivas, y luego mostrará un saludo personalizado.
 

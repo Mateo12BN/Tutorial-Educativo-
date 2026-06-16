@@ -54,18 +54,18 @@ double precioTotal = 45.50;
 // 3. Guardando un estado (verdadero o falso)
 boolean estaRegistrado = true;
 ```
-### ⌨️ 2. Entrada y Salida de Datos (Interactuar con el usuario)
+###  Entrada y Salida de Datos (Interactuar con el usuario)
 
 Hasta ahora, hemos creado variables con valores fijos. Pero un verdadero programa necesita interactuar con las personas: mostrarles mensajes en la pantalla (Salida) y leer lo que escriben desde sus teclados (Entrada).
 
 ---
-### ⌨️ 2. Entrada y Salida de Datos (Interactuar con el usuario)
+###  Entrada y Salida de Datos (Interactuar con el usuario)
 
 Hasta ahora, hemos creado variables con valores fijos. Pero un verdadero programa necesita interactuar con las personas: mostrarles mensajes en la pantalla (Salida) y leer lo que escriben desde sus teclados (Entrada).
 
 ---
 
-### 🖥️ 1. Salida de Datos (Mostrar mensajes)
+### Salida de Datos (Mostrar mensajes)
 Para mostrarle información al usuario en la pantalla, utilizamos la instrucción `System.out.println()`. Todo lo que coloques dentro de los paréntesis entre comillas se imprimirá en la consola.
 
 ```java
@@ -73,7 +73,69 @@ System.out.println("Hola, este texto aparecerá en la pantalla.");
 
 ```
 Ejemplo: Tu primer programa interactivo
-Vamos a juntar todo lo que hemos aprendido en un solo lugar. Puedes revisar y descargar el código fuente completo directamente aquí: 📄 elPrimerPrograma.java.
+Vamos a juntar todo lo que hemos aprendido en un solo lugar y descargar el código fuente completo directamente aquí: [📄 elPrimerPrograma.java](elPrimerPrograma.java)
 
 Este programa le preguntará al usuario su nombre y su edad, guardará las respuestas en variables limpias y descriptivas, y luego mostrará un saludo personalizado.
 
+## Ciclos o Bucles (Automatizar tareas repetitivas)
+
+Ahora podemos empezar a hablar de ciclos para entenderlo de mejor manera imagina que tu profesor te pide como castigo escribir en la pantalla *"Debo usar variables con nombres descriptivos"* unas 100 veces. Copiar y pegar la línea `System.out.println()` cien veces sería aburrido y una mala práctica.
+
+Para eso existen los **ciclos (bucles)**: estructuras que nos permiten repetir un bloque de código tantas veces como necesitemos de forma automática.
+
+---
+
+###  El Ciclo `while` (Repetir mientras se cumpla una condición)
+
+Piensa en el ciclo `while` como un condicional `if` que se repite una y otra vez. El programa evalúa una condición: si es verdadera (`true`), ejecuta el código de adentro y vuelve a revisar. Se detendrá únicamente cuando la condición se vuelva falsa (`false`).
+
+
+
+####  Ejemplo práctico con `while`:
+Vamos a crear un contador simple que imprima los números del 1 al 5.
+
+```java
+public class EjemploWhile {
+    public static void main(String[] args) {
+        int contadorNumero = 1; // 1. Inicialización: ¿Dónde empezamos?
+
+        // Mientras el contador sea menor o igual a 5, el ciclo continuará
+        while (contadorNumero <= 5) { // 2. Condición: ¿Hasta dónde llegamos?
+            System.out.println("El número actual es: " + contadorNumero);
+            
+            contadorNumero++; // 3. Incremento: Sumamos 1 para avanzar (evita un ciclo infinito)
+        }
+        
+        System.out.println("¡Ciclo terminado!");
+    }
+}
+```
+Aqui se encuentra un ejemplo practico de como deberias hacer un ciclo for en un ejemplo Practico como lo es la tabla de multiplicar del 5: [📄 TablaMultiplicar.java](TablaMultiplicar.java) 
+
+##  Métodos (Funciones) - Organiza y reutiliza tu código
+
+Imagina que estás construyendo una casa con bloques de Lego. En lugar de fabricar cada bloque desde cero cada vez que lo necesitas, usas bloques que ya vienen listos y los repites por toda la construcción.
+
+En programación, un **método** (o función) es un bloque de código que realiza una tarea específica y al cual le asignamos un nombre. Cuando queremos que el programa ejecute esa tarea, simplemente lo llamamos por su nombre. Esto nos ayuda a evitar copiar y pegar el mismo código una y otra vez, logrando un **Código Limpio**.
+
+---
+
+### Estructura básica de un método
+Para crear un método en Java, necesitamos definir algunas cosas importantes:
+
+```java
+public static tipoDeRetorno nombreDelMetodo(tipoDeDato parametro) {
+    // Aquí va el código que realiza la tarea
+    return valor; 
+}
+```
+tipoDeRetorno: Es el tipo de caja (dato) que el método nos devolverá al terminar su trabajo (int, String, double, etc.). Si el método solo hace una acción (como imprimir un mensaje) y no devuelve ningún valor, usamos la palabra void (vacío).
+
+nombreDelMetodo: Un nombre descriptivo en verbo que explique qué hace (ej. calcularSuma, mostrarSaludo).
+
+parámetros (Opcional): Son los datos de entrada que el método necesita para poder trabajar (las materias primas).
+-----
+Ejemplo Práctico: Una calculadora organizada
+Vamos a crear un programa que tenga un método especial para sumar dos números. Así, el método main se mantendrá limpio y ordenado, delegando el trabajo matemático a nuestro nuevo método.
+
+Puedes ver el archivo de código fuente completo aquí: [📄 EjemploMetodos.java](EjemploMetodos.java) 
